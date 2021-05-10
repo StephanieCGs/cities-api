@@ -67,20 +67,18 @@ CREATE EXTENSION earthdistance;
 ### Executing program
 
 * Abrir no IntelliJ Community o projeto e executar. 
-
 * Rotas:
+* Retorna países: http://localhost:8080/countries
+  * Retorna estados do Brasil: http://localhost:8080/states
+* Retorna cidades do Brasil: http://localhost:8080/cities
+  * Retorna a distância **em milhas** entre duas cidades (é feito pela extensão earthdistance do postgresql): http:<span></span>//localhost:8080/distances/by-points?from=**IdCidadeUm**&to=**IdCidadeDois**
 
-  * Retorna países: http://localhost:8080/countries
-* Retorna estados do Brasil: http://localhost:8080/states
-  * Retorna cidades do Brasil: http://localhost:8080/cities
-* Retorna a distância **em milhas** entre duas cidades (é feito pela extensão earthdistance do postgresql): http:<span></span>//localhost:8080/distances/by-points?from=**IdCidadeUm**&to=**IdCidadeDois**
+    * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em milhas:  http://localhost:8080/distances/by-points?from=4929&to=5254
+* Retorna a distância **em metros** entre duas cidades (é feito pela extensão cube do postgresql): http:<span></span>//localhost:8080/distances/by-cube?from=**IdCidadeUm**&to=**IdCidadeDois**
   
-  * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em milhas:  http://localhost:8080/distances/by-points?from=4929&to=5254
-  * Retorna a distância **em metros** entre duas cidades (é feito pela extensão cube do postgresql): http:<span></span>//localhost:8080/distances/by-cube?from=**IdCidadeUm**&to=**IdCidadeDois**
-
-    * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em metros:  http://localhost:8080/distances/by-cube?from=4929&to=5254
-* Retorna a distância entre duas cidades **na unidade desejada (METERS, KILOMETERS, MILES)** / (Cálculo feito no programa): http::<span></span>//localhost:8080/distances/by-math?from=**IdCidadeUm**&to=**IdCidadeUm**&unit=**UnidadeDeMedida**
-    * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em metros:  http://localhost:8080/distances/by-math?from=4929&to=5254&unit=METERS
+  * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em metros:  http://localhost:8080/distances/by-cube?from=4929&to=5254
+  * Retorna a distância entre duas cidades **na unidade desejada (METERS, KILOMETERS, MILES)** / (Cálculo feito no programa): http::<span></span>//localhost:8080/distances/by-math?from=**IdCidadeUm**&to=**IdCidadeUm**&unit=**UnidadeDeMedida**
+  * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em metros:  http://localhost:8080/distances/by-math?from=4929&to=5254&unit=METERS
 
 ---
 
