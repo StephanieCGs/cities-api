@@ -6,7 +6,16 @@
 
 ## Description
 
-Desenvolver uma aplicação web em Node.js com banco de dados MySQL. A aplicação consistirá somente de uma página com dois painéis: no painel posicionado a esquerda, o usuário poderá cadastrar novos comentários. No painel da direita todos os comentários cadastrados devem ser listados, com um botão ao lado de cada um que ao ser clicado executará um áudio de leitura do comentário.
+Projeto para aprender a desenvolver uma API Rest de consulta de cidades do Brasil com dados comparativos. Abordando as boas práticas de Java e do Spring, e como popular um banco de dados Postgres e criar um serviço para o cálculo de distância entre cidades.
+
+
+
+## Tecnologies
+
+- [Java](https://www.java.com/pt-BR/) 
+- [Gradle](https://gradle.org/)
+- [Docker](https://www.docker.com/)
+- [Postgresql](https://www.postgresql.org/)
 
 
 
@@ -53,39 +62,43 @@ CREATE EXTENSION earthdistance;
 
 * Obs.: cube e earthdistance são extensões que permitirão com que o Banco de Dados calcule a distância entre duas cidades informadas.
 
- 
-
-## Tecnologies
-
-- [Java](https://www.java.com/pt-BR/) 
-
-- [Gradle](https://gradle.org/)
-- [Docker](https://www.docker.com/)
-- [Postgresql](https://www.postgresql.org/)
-
-
+  
 
 ### Executing program
 
 * Abrir no IntelliJ Community o projeto e executar. 
 
-* No navegador acesse http://localhost:3000/index (ou a porta de preferência) para ver o funcionamento.
+* Rotas:
 
   * Retorna países: http://localhost:8080/countries
 * Retorna estados do Brasil: http://localhost:8080/states
   * Retorna cidades do Brasil: http://localhost:8080/cities
-* Retorna a distância **em milhas** entre duas cidades (é feito pela extensão earthdistance do postgresql): http://localhost:8080/distances/by-points?from=IdCidadeUm&to=IdCidadeDois
+* Retorna a distância **em milhas** entre duas cidades (é feito pela extensão earthdistance do postgresql): http:<span></span>//localhost:8080/distances/by-points?from=**IdCidadeUm**&to=**IdCidadeDois**
   
   * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em milhas:  http://localhost:8080/distances/by-points?from=4929&to=5254
-  * Retorna a distância **em metros** entre duas cidades (é feito pela extensão cube do postgresql): http://localhost:8080/distances/by-cube?from=IdCidadeUm&to=IdCidadeDois
+  * Retorna a distância **em metros** entre duas cidades (é feito pela extensão cube do postgresql): http:<span></span>//localhost:8080/distances/by-cube?from=**IdCidadeUm**&to=**IdCidadeDois**
 
     * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em metros:  http://localhost:8080/distances/by-cube?from=4929&to=5254
-* Retorna a distância entre duas cidades **na unidade desejada (METERS, KILOMETERS, MILES)** / (Cálculo feito no programa): http://localhost:8080/distances/by-math?from=IdCidadeUm&to=IdCidadeUm&unit=UnidadeDeMedida
+* Retorna a distância entre duas cidades **na unidade desejada (METERS, KILOMETERS, MILES)** / (Cálculo feito no programa): http::<span></span>//localhost:8080/distances/by-math?from=**IdCidadeUm**&to=**IdCidadeUm**&unit=**UnidadeDeMedida**
     * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em metros:  http://localhost:8080/distances/by-math?from=4929&to=5254&unit=METERS
 
+---
+
+---
 
 
-http:<span></span>//localhost:8080/distances/by-points?from=**IdCidadeUm**&to=**IdCidadeDois**
 
-<span>https://example.com</span>
+### Heroku - Tests:
 
+* Também é possível fazer os testes de retorno nos seguintes links:
+  * Retorna países: https://cities-api-heroku.herokuapp.com/countries
+  * Retorna estados do Brasil: https://cities-api-heroku.herokuapp.com/states
+  * Retorna cidades do Brasil:https://cities-api-heroku.herokuapp.com/cities
+  * Retorna a distância **em milhas** entre duas cidades (é feito pela extensão earthdistance do postgresql): http:<span></span>//localhost:8080/distances/by-points?from=**IdCidadeUm**&to=**IdCidadeDois**
+
+    * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em milhas:  https://cities-api-heroku.herokuapp.com/distances/by-points?from=4929&to=5254
+  * Retorna a distância **em metros** entre duas cidades (é feito pela extensão cube do postgresql): http:<span></span>//localhost:8080/distances/by-cube?from=**IdCidadeUm**&to=**IdCidadeDois**
+
+    * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em metros:  https://cities-api-heroku.herokuapp.com/distances/by-cube?from=4929&to=5254
+  * Retorna a distância entre duas cidades **na unidade desejada (METERS, KILOMETERS, MILES)** / (Cálculo feito no programa): http::<span></span>//localhost:8080/distances/by-math?from=**IdCidadeUm**&to=**IdCidadeUm**&unit=**UnidadeDeMedida**
+    * Exemplo - Distância entre Ibaté/SP e São Carlos/SP em metros:  https://cities-api-heroku.herokuapp.com/distances/by-math?from=4929&to=5254&unit=METERS
