@@ -6,6 +6,10 @@ Checagem de países, estados e cidades e cálculo de distância entre cidades.
 
 Projeto para aprender a desenvolver uma API Rest de consulta de cidades do Brasil com dados comparativos. Abordando as boas práticas de Java e do Spring, e como popular um banco de dados Postgres e criar um serviço para o cálculo de distância entre cidades.
 
+
+
+Ao final também são disponibilizadas rotas da hospedagem da aplicação no Heroku, para fins de testes das funcionalidades da aplicação.
+
 ## Tecnologies
 
 - [Java](https://www.java.com/pt-BR/)
@@ -75,7 +79,7 @@ CREATE EXTENSION earthdistance;
 
 ### Heroku - Tests:
 
-- Também é possível fazer os testes de retorno nos seguintes links:
+- Também é possível fazer os testes de retorno com as seguintes rotas da hospedagem da aplicação no Heroku:
   - Retorna países: https://cities-api-heroku.herokuapp.com/countries
   - Retorna estados do Brasil: https://cities-api-heroku.herokuapp.com/states
   - Retorna cidades do Brasil:https://cities-api-heroku.herokuapp.com/cities
