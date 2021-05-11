@@ -9,6 +9,7 @@ Projeto para aprender a desenvolver uma API Rest de consulta de cidades do Brasi
 ## Tecnologies
 
 - [Java](https://www.java.com/pt-BR/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
 - [Gradle](https://gradle.org/)
 - [Docker](https://www.docker.com/)
 - [Postgresql](https://www.postgresql.org/)
@@ -18,7 +19,7 @@ Projeto para aprender a desenvolver uma API Rest de consulta de cidades do Brasi
 - Java 8
 - Docker
 - IntelliJ Community
-- Heroku CLI
+- Postman / Insomnia / Ou outro
 
 ## Getting Started/Project Setup
 
@@ -57,7 +58,7 @@ CREATE EXTENSION earthdistance;
 ### Executing program
 
 - Abrir no IntelliJ Community o projeto e executar.
-- Rotas:
+- Rotas no Postman:
   - Retorna países: http://localhost:8080/countries
   - Retorna estados do Brasil: http://localhost:8080/states
   - Retorna cidades do Brasil: http://localhost:8080/cities
